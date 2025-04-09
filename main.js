@@ -1,22 +1,22 @@
-function clorirDia(){ //pega o valor do campo dia
-    let days = document.getElementById('days').
-    ariaValueMax;
+function colorirDia(){ 
+    //pega o valor do campo dia
+    let days = document.getElementById('day').value;
 
     //pega o valor do campo de cor
-    let color = document.getElementById('color').
-    value;
+    let color = document.getElementById('color').value; 
+    
 
     //pega os elementos da tabela calendario
-    let calendar = document.getElementById('calendar')
+    let calendar = document.getElementById('calendar');
 
     //ver se o campo de dia foi preenchido
-    if('days'){
+    if(!days){
         alert('Favor informar o DIA');
+
     } else if ((days > 0) && (days < 31)){
         //se o numero de dias está no internvalo 
         //aplicara a cor na celula de calendario 
-        let td = calendar.getElementsByTagName
-        ('td') [parseInt(days)];
+        let td = calendar.getElementsByTagName('td')[parseInt(days)+1];
         td.style.backgroundColor = color;
     } else{
         alert("Favor informar um dia do calendario");
